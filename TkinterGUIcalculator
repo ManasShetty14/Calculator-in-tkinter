@@ -1,0 +1,29 @@
+import tkinter as tk
+from tkinter import messagebox
+def summ():
+        msg=messagebox.showinfo("Demo",int(t.get())+int(s.get()))
+def sub():
+        msg=messagebox.showinfo("Demo",int(t.get())-int(s.get()))
+def mul():
+        msg=messagebox.showinfo("Demo",int(t.get())*int(s.get()))
+
+        
+root=tk.Tk()
+root.geometry("200x200")
+root.title("Calc")
+l1=tk.Label(root,text="Num1:")
+l1.grid(row=0)
+t=tk.Entry(root)
+t.grid(row=0,column=1)
+l2=tk.Label(root,text="Num2:")
+l2.grid(row=1)
+s=tk.Entry(root)
+s.grid(row=1,column=1)
+b1=tk.Button(root,text="Sum",command=summ)
+b1.grid(row=2,column=0)
+b2=tk.Button(root,text="Sub",command=sub)
+b2.grid(row=3,column=0)
+b3=tk.Button(root,text="Mul",command=mul)
+b3.grid(row=4,column=0)
+
+root.mainloop()
